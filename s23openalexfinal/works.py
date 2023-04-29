@@ -75,10 +75,32 @@ class Works:
 
     def bibtex(self):
         """bibtex class"""
-        print("1")
+        fields = []
+
+        if self.data["type"] == "journal-article":
+            fields += ["@article{journal-article, "]
+        else:
+            raise Exception("Unsupported type {self.data['type']},")
+
+        for author in self.data["authorships"]:
+            fields += [f'author  = \'{author["author"]["display_name"]}\',']
+
+        fields += [f'title   = \'{self.data["title"]}\',']
+        fields += [f'journal = \'{self.data["host_venue"]["display_name"]}\',']
+        fields += [f'year    = \'{self.data["publication_year"]}\',']
+        fields += [f'journal = \'{self.data["host_venue"]["display_name"]}\',']
+        fields += [f'volume  = \'{self.data["biblio"]["volume"]}\',']
+
+        fields += [f'doi =  \'{self.data["doi"]}\'']
+        fields += ["}"]
+        bibtex = "\n".join(fields)
+        # print("fields")
+        # print(fields)
+        return bibtex
 
     @property
     def ris(self):
+        """ris class"""
         fields = []
         if self.data["type"] == "journal-article":
             fields += ["TY  - JOUR"]
