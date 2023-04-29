@@ -2,6 +2,8 @@ LICENSE
 README.md
 setup.py
 s23openalexfinal/__init__.py
+s23openalexfinal/main.py
+s23openalexfinal/test_ris.py
 s23openalexfinal/utils.py
 s23openalexfinal/works.py
 s23openalexfinal.egg-info/PKG-INFO
