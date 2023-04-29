@@ -9,7 +9,7 @@ setup(
     maintainer_email="ruilid@andrew.cmu.edu",
     license="MIT",
     packages=["s23openalexfinal"],
-    entry_points={"console_scripts": ["oa = s23openalexfinal.main:main"]},
+    entry_points={"console_scripts": ["oaf = s23openalexfinal.main:main"]},
     long_description="""A long
       multiline description.""",
 )
