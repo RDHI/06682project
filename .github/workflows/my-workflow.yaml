@@ -1,8 +1,8 @@
-name: First job
+name: pytest action
 on: push
 
 jobs:
-  my_first_job:
+  do_pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
