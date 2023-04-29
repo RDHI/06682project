@@ -1,0 +1,3 @@
+[console_scripts]
+oa = s23openalex.main:main
+
